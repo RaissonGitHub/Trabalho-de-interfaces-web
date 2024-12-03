@@ -14,8 +14,7 @@ nav{
     background-color: rgb(112, 88, 51);
 }
 main{
-    min-height: 50vh;
-    overflow: scroll;
+    min-height: 50vh;   
 }
 .i-p{
     text-align: justify;
