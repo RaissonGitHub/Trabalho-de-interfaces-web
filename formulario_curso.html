@@ -17,43 +17,41 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    <a class="nav-link" href="cursos.html">Cursos</a>
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="cursos.html">Cursos</a>
                     <a class="nav-link" href="estudantes.html">Estudantes</a>
                 </div>
             </div>
         </div>
     </nav>
-    <main class="mx-5 d-flex flex-wrap justify-content-center gap-5">
-        <h1 class="text-center my-4 fs-1 w-100">Bem-vindo ao Café Aroma do Campo!</h1>
-        <div style="width: 15%;">
-            <img src="imgs/cafe.webp" class="i-img1"
-                alt="Uma xícara de café quente ao lado de grãos torrados, sobre uma mesa de madeira rústica.">
-        </div>
-        <section class="i-sec">
-            <p class="i-p">
-                No coração da cidade, o Café Aroma do Campo oferece uma experiência única para os amantes do bom café.
-                Nossa missão é trazer os sabores autênticos do campo para a sua xícara, com grãos selecionados
-                diretamente das fazendas mais renomadas do Brasil. Cada detalhe é cuidadosamente pensado para
-                proporcionar um ambiente acolhedor e relaxante, onde tradição e modernidade se encontram.
-            </p>
-            <p class="i-p text-secondary">
-                O espaço foi projetado para criar uma conexão entre nossos clientes e a natureza. Decorado com tons
-                terrosos, plantas suspensas e móveis de madeira reciclada, o Café Aroma do Campo é o lugar perfeito para
-                quem busca tranquilidade e sabor. Aqui, cada xícara é acompanhada de um sorriso, reforçando o nosso
-                compromisso com a qualidade e o bem-estar dos nossos visitantes.
-            </p>
-            <p class="i-p">
-                Além dos nossos cafés especiais, oferecemos uma seleção de doces caseiros e salgados artesanais, todos
-                preparados com ingredientes frescos e de origem local. Venha nos visitar e permita-se uma pausa merecida
-                em um ambiente onde cada aroma conta uma história e cada detalhe foi pensado para encantar.
-            </p>
-        </section>
-        <div style="text-align: center;">
-            <img src="imgs/ambiente.webp" class="i-img2"
-                alt="Um ambiente aconchegante com móveis de madeira, luzes suaves e plantas penduradas">
-        </div>
-
+    <main class="mx-5 d-flex flex-column">
+        <h1 class="text-center my-4 fs-1 w-100">Curso</h1>
+        <form action="" class="form w-50 p-4 bg-light align-self-center d-flex flex-column gap-3">
+            <label for="nome" class="form-control-label">Nome:</label>
+            <input type="text" name="nome" id="nome" class="form-control">
+            <fieldset>
+                <legend>Modalidade:</legend>
+                <input type="radio" name="modalidade" id="" class="form-check-input">
+                <label class="form-control-label" for="">Técnico Integrado ao Ensino Médio (INTEGRADO)</label>
+            </fieldset>
+            <fieldset>
+                <legend>Turno</legend>
+                <input type="checkbox" name="turno" id="manha" class="form-check-input">
+                <label for="manha" class="form-control-label">Manhã</label>
+                <input type="checkbox" name="turno" id="tarde" class="form-check-input">
+                <label for="tarde" class="form-control-label">Tarde</label>
+                <input type="checkbox" name="turno" id="noite" class="form-check-input">
+                <label for="noite" class="form-control-label">Noite</label>
+            </fieldset>
+            <label for="semestre" class="form-control-label">Semestre:</label>
+            <input type="number" name="semestre" id="semestre" min="1" max="2" class="form-control">
+            <label for="campus" class="form-control-label">Campus:</label>
+            <input type="text" name="campus" id="campus" class="form-control" readonly>
+            <div class="text-center">
+                <input type="submit" value="Salvar" class="btn btn-primary">
+                <input type="reset" value="Limpar"class="btn btn-primary">
+            </div>
+        </form>
     </main>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
         <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>

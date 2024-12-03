@@ -5,13 +5,17 @@ body{
 header{
     width: 100%; /* Largura total da página */
     height: 400px; /* Altura ajustável conforme o design desejado */
-    background-image: url('banner.webp'); /* Substitua pelo caminho da imagem */
+    background-image: url('imgs/banner.webp'); /* Substitua pelo caminho da imagem */
     background-size: cover; /* Ajusta a imagem para cobrir toda a área do banner */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
 }
 nav{
     background-color: rgb(112, 88, 51);
+}
+main{
+    min-height: 50vh;
+    overflow: scroll;
 }
 .i-p{
     text-align: justify;
@@ -28,6 +32,11 @@ nav{
 .i-img2{
     width: 30%;
     text-align: center;
+}
+.msgsucesso{
+    font-family: Arial;
+    font-size: 12pt;
+
 }
 footer{
     background-color: rgb(112, 88, 51);

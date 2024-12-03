@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header></header>
+    <nav class="navbar navbar-expand">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link"  href="cursos.html">Cursos</a>
+                    <a class="nav-link active" aria-current="page" href="estudantes.html">Estudantes</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="mx-5 d-flex flex-column">
+        <h1 class="text-center my-4 fs-1 w-100">Estudante</h1>
+        <form action="" class="form w-50 p-4 bg-light align-self-center d-flex flex-column gap-3">
+            <label for="matricula" class="form-control-label">Matrícula:</label>
+            <input type="text" name="matricula" id="matricula" class="form-control">
+            <label for="nome" class="form-control-label">Nome:</label>
+            <input type="text" name="nome" id="nome" class="form-control">
+            <label for="cpf" class="form-control-label">CPF:</label>
+            <input type="text" name="cpf" id="cpf" class="form-control">
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="masculino" class="form-check-input">
+                <label for="masculino" class="form-control-label">Masculino</label>
+                <input type="radio" name="sexo" id="feminino" class="form-check-input">
+                <label for="feminino" class="form-control-label">Feminino</label>
+            </fieldset>
+            <label for="data" class="form-control-label">Data de nascimento:</label>
+            <input type="date" name="data" id="data" class="form-control">
+            <label for="cep" class="form-control-label">CEP:</label>
+            <input type="number" name="cep" id="cep" class="form-control">
+            <div>
+                <button class="btn btn-primary">Consultar</button>
+            </div>
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" name="logradouro" id="logradouro">
+            <label for="complemento">Complemento:</label>
+            <input type="text" name="complemento" id="complemento">
+            <label for="numero">Número:</label>
+            <input type="text" name="numero" id="numero">
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro">
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade">
+            <label for="estado">Estado:</label>
+            <input type="text" name="estado" id="estado">
+            <div class="d-flex">
+                <div class="w-50">
+                    <label for="cursosDisponiveis">Cursos Disponíveis:</label><br>
+                    <select id="cursosDisponiveis" multiple></select>
+                    <br><br>
+                    <button onclick="" class="btn btn-primary">Mover Selecionados →</button>
+                  </div>
+                
+                  <div class="w-50">
+                    <label for="cursosSelecionados">Cursos Selecionados:</label><br>
+                    <select id="cursosSelecionados" multiple></select>
+                  </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Salvar" class="btn btn-primary">
+                <input type="reset" value="Limpar"class="btn btn-primary">
+            </div>
+        </form>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Inicio</a></li>
+            <li class="nav-item"><a href="cursos.html" class="nav-link px-2 text-body-secondary">Cursos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
