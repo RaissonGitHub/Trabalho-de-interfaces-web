@@ -99,6 +99,20 @@ function formatarCEP(){
     cep.val(c)
 }
 
+function selecionarCursos(){
+    console.log('a')
+    cursos = $('#cursosDisponiveis option:selected')
+    for(let i = 0; i<cursos.length; i++){
+        $('#cursosSelecionados').append(cursos[i])
+    }
+}
+function removerCursos(){
+    cursos = $('#cursosSelecionados option:selected')
+    for(let i = 0; i<cursos.length; i++){
+        $('#cursosDisponiveis').append(cursos[i])
+    }
+}
+
 function validaFormulario() {
     $('div').remove('.alert')
     let ret = true
@@ -203,6 +217,13 @@ function validaFormulario() {
         ret = false
         
     }
+    if($('#cursosSelecionados option:selected').length === 0){
+        $('.se').after('<div class="alert alert-danger w-100" role="alert">\
+            Campo obrigatório!\
+            </div>')    
+        ret = false
+        
+    }
     return ret
 }
 
@@ -239,3 +260,31 @@ function validarCPF(cpf) {
     // Verifica se os dois dígitos verificadores estão corretos
     return String(t1) === cpf[9] && String(t2) === cpf[10];
 }
+
+
+$(document).ready(function(){
+    var params = "";
+    const curso = $('#cursosDisponiveis')
+    curso.empty()
+    $('option').remove('.acurso');
+    $.ajax({
+        type: "GET",  
+        url: `https://ingresso.ifrs.edu.br/prematricula/ws/listarCursosIW20242.php`,
+        data: params,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(msg, status) {
+            msg.forEach(element => {
+                curso.append(
+                    `<option class="acurso" value="${element.id}">${element.nome}</option>`
+                )
+            });
+            if (!$.fn.dataTable.isDataTable('#tabela-cursos')) {
+                $('#tabela-cursos').DataTable({searching: false});
+            }
+        },
+        error: function(xhr, msg, e) {
+            console.error('Erro na requisição:'); 
+        }
+    });
+})

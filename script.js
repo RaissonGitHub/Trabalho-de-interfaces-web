@@ -3,7 +3,7 @@ function buscarCursos(){
     const curso = $('#curso').val();
     $('td').remove('.c-t');
     $.ajax({
-        type: "GET",  /* método de envio dos parâmetros para o web service */
+        type: "GET",  
         url: `https://ingresso.ifrs.edu.br/prematricula/ws/listarCursosIW20242.php?curso=${curso}`,
         data: params,
         contentType: "application/json; charset=utf-8",
@@ -83,7 +83,7 @@ $(document).ready(function(){
     const cursoId = urlParams.get('id');
     var params = "";
     $.ajax({
-        type: "GET",  /* método de envio dos parâmetros para o web service */
+        type: "GET",  
         url: `https://ingresso.ifrs.edu.br/prematricula/ws/pegarCursoIW20242.php?id=${cursoId}`,
         data: params,
         contentType: "application/json; charset=utf-8",
@@ -91,7 +91,12 @@ $(document).ready(function(){
         success: function(msg, status) {
             $('#nome').val(msg.nome)
             $(`input[name="modalidade"][value="${msg.modalidade}"]`).prop('checked', true);
-            $(`input[name="turno"][value="${msg.turno}"]`).prop('checked', true);
+            let turno = msg.turno
+            turno = turno.split(' E ')
+            turno.forEach(element=>{
+                $(`input[name="turno"][value="${element}"]`).prop('checked', true);
+
+            })
             $('#semestre').val(msg.semestre)
             $('#campus').val(msg.unidade.nomeCampus)
 

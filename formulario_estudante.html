@@ -61,18 +61,21 @@
             <input type="text" name="cidade" id="cidade">
             <label for="estado">Estado:</label>
             <input type="text" name="estado" id="estado" readonly>
-            <div class="d-flex">
-                <div class="w-50">
+            <div class="d-flex flex-wrap">
+                <div class="w-50 ">
                     <label for="cursosDisponiveis">Cursos Disponíveis:</label><br>
-                    <select id="cursosDisponiveis" multiple></select>
-                    <br><br>
-                    <button type="button" onclick="" class="btn btn-primary">Mover Selecionados →</button>
-                  </div>
+                    <select id="cursosDisponiveis" multiple class="form-select"></select>
+                    <br><br >
+                </div>
                 
-                  <div class="w-50">
+                <div class="w-50 se">
                     <label for="cursosSelecionados">Cursos Selecionados:</label><br>
-                    <select id="cursosSelecionados" multiple></select>
-                  </div>
+                    <select id="cursosSelecionados" multiple class="form-select"></select>
+                </div>
+                <div class="d-flex gap-3 w-100 justify-content-center">
+                    <button type="button" onclick="selecionarCursos()" class="btn btn-primary">Mover Selecionados →</button>
+                    <button type="button" onclick="removerCursos()" class="btn btn-primary">Remover Selecionados ←</button>
+                </div>
             </div>
             <div class="text-center">
                 <input type="submit" value="Salvar" class="btn btn-primary">
