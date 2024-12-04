@@ -74,7 +74,6 @@ function validarFormulario(){
             </div>')
         ret = false
     }
-
     return ret
 }
 
